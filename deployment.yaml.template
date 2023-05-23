@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coop
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: coop
+  template:
+    metadata:
+      labels:
+        app: coop
+    spec:
+      containers:
+        - name: coop
+          image: jinh9015/coop:$BUILD_NUMBER
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+
