@@ -14,8 +14,8 @@ spec:
         app: coop
     spec:
       containers:
-              - name: coop-frontend
-          image: jinh9015/coop:31
+        - name: coop
+          image: jinh9015/coop:10
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
