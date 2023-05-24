@@ -9,6 +9,9 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: coopapp
     alb.ingress.kubernetes.io/group.order: '1'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:940168446867:certificate/3f9df5ae-cffa-4eb6-8760-d62f9fe5964a
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
 spec:
   rules:
     - http:
