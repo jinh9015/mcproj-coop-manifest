@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: coop
-          image: jinh9015/coop:35
+          image: jinh9015/coop:36
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
