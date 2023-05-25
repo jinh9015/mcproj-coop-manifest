@@ -4,7 +4,7 @@ metadata:
   name: coop
   namespace: default
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: coop
@@ -19,4 +19,8 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
-
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
